@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Choose Your Flower 🌹</title>
+
+<link rel="stylesheet" href="flowers.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="sparkles"></div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🌸 Welcome,
+            <span id="herName"></span>
+        </h1>
+
+        <p class="subtitle">
+            Before we continue...
+        </p>
+
+        <p class="description">
+            Every fairy tale has a flower.
+            <br><br>
+            Which one would you like to bring with you for the rest of this story?
+        </p>
+
+        <div class="flowers">
+
+            <div class="flower rose" onclick="chooseFlower('rose')">
+
+                <div class="emoji">🌹</div>
+
+                <h2>Rose</h2>
+
+                <p>
+                    Elegant, warm, and timeless.
+                </p>
+
+            </div>
+
+            <div class="flower lily" onclick="chooseFlower('lily')">
+
+                <div class="emoji">🤍</div>
+
+                <h2>Lily</h2>
+
+                <p>
+                    Gentle, graceful, and beautiful.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div id="selectedMessage"></div>
+
+        <button
+        id="continueBtn"
+        onclick="continueStory()">
+
+            Continue the Story 📖
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="flowers.js"></script>
+
+</body>
+</html>
