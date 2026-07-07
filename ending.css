@@ -1,344 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
 
-    font-family:'Poppins',sans-serif;
+font-family:'Poppins',sans-serif;
 
-    min-height:100vh;
+background:
+linear-gradient(rgba(30,20,10,.45),rgba(30,20,10,.65)),
+url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80");
 
-    display:flex;
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
-    justify-content:center;
+min-height:100vh;
 
-    align-items:center;
+display:flex;
+justify-content:center;
+align-items:center;
 
-    overflow:hidden;
-
-    background:
-    linear-gradient(rgba(35,20,10,.45),rgba(35,20,10,.45)),
-    url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+overflow:hidden;
 
 }
 
-/* Floating sparkles */
+/* Golden magical glow */
 
-.sparkles,
-.hearts,
-.flowers{
+body::before{
 
-    position:fixed;
+content:"✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨";
 
-    inset:0;
+position:fixed;
 
-    pointer-events:none;
+top:-20%;
 
-    overflow:hidden;
+left:-10%;
 
-}
+width:120%;
 
-.sparkles::before{
+font-size:30px;
 
-    content:"✨ ✨ ✨ ✨ ✨ ✨ ✨";
+opacity:.30;
 
-    position:absolute;
+pointer-events:none;
 
-    width:120%;
-
-    left:-10%;
-
-    top:-20%;
-
-    font-size:28px;
-
-    opacity:.25;
-
-    animation:sparkles 18s linear infinite;
+animation:sparkles 18s linear infinite;
 
 }
 
-.hearts::before{
+/* Falling roses */
 
-    content:"❤️ 💖 💕 💗 💘 ❤️ 💖 💕";
+body::after{
 
-    position:absolute;
+content:"🌹 🌹 🌹 🌹 🤍 🌹 🌸";
 
-    width:120%;
+position:fixed;
 
-    left:-10%;
+top:-20%;
 
-    top:-20%;
+left:-10%;
 
-    font-size:28px;
+width:120%;
 
-    opacity:.25;
+font-size:34px;
 
-    animation:hearts 22s linear infinite;
+opacity:.35;
 
-}
+pointer-events:none;
 
-.flowers::before{
-
-    content:"🌹 🌸 🤍 🌹 🌸 🤍 🌹";
-
-    position:absolute;
-
-    width:120%;
-
-    left:-10%;
-
-    top:-20%;
-
-    font-size:30px;
-
-    opacity:.4;
-
-    animation:flowers 26s linear infinite;
+animation:roses 24s linear infinite;
 
 }
 
-/* Main */
-
-.container{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    padding:20px;
-
-}
-
-/* Card */
+/* Main card */
 
 .card{
 
-    width:95%;
+width:92%;
+max-width:900px;
 
-    max-width:850px;
+background:rgba(255,248,240,.92);
 
-    background:rgba(255,248,240,.95);
+backdrop-filter:blur(10px);
 
-    backdrop-filter:blur(12px);
+padding:45px;
 
-    border-radius:25px;
+border-radius:28px;
 
-    padding:45px;
+border:2px solid rgba(255,220,120,.4);
 
-    text-align:center;
+box-shadow:
+0 20px 60px rgba(0,0,0,.45),
+0 0 40px rgba(255,215,0,.20);
 
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
+text-align:center;
 
-    animation:fadeUp 1.2s;
+animation:fadeUp 1.4s;
 
 }
+
+/* Rose */
 
 .rose{
 
-    font-size:70px;
+font-size:75px;
 
-    animation:float 3s ease-in-out infinite;
+animation:float 3s ease-in-out infinite;
+
+margin-bottom:15px;
 
 }
 
+/* Headings */
+
 h1{
 
-    margin-top:10px;
+font-family:'Cinzel',serif;
 
-    font-family:'Cinzel',serif;
+font-size:46px;
 
-    color:#8B4513;
+color:#d4af37;
 
-    font-size:42px;
+text-shadow:0 0 15px rgba(255,215,0,.6);
+
+margin-bottom:10px;
 
 }
 
 h2{
 
-    margin:18px 0;
+font-family:'Cinzel',serif;
 
-    color:#b8860b;
+font-size:28px;
 
-    font-size:28px;
+color:#8B4513;
+
+margin-bottom:20px;
 
 }
+
+/* Text */
 
 .message{
 
-    line-height:2;
+font-size:19px;
 
-    color:#555;
+line-height:2;
 
-    margin:25px 0;
+color:#5d4037;
 
-    font-size:18px;
-
-}
-
-.divider{
-
-    width:120px;
-
-    height:2px;
-
-    background:#d4af37;
-
-    margin:30px auto;
-
-    border-radius:10px;
+margin:25px 0;
 
 }
 
 .quote{
 
-    margin-top:30px;
+margin-top:35px;
 
-    font-size:24px;
+font-size:24px;
 
-    font-style:italic;
+font-style:italic;
 
-    color:#8B4513;
+font-family:'Cinzel',serif;
 
-    line-height:1.8;
+color:#8B4513;
 
-    font-family:'Cinzel',serif;
+line-height:1.8;
 
 }
+
+/* Divider */
+
+.divider{
+
+width:120px;
+
+height:2px;
+
+background:#d4af37;
+
+margin:35px auto;
+
+border-radius:10px;
+
+}
+
+/* Signature */
 
 .signature{
 
-    margin-top:40px;
+margin-top:35px;
 
-    font-size:22px;
+font-size:22px;
 
-    color:#444;
+color:#444;
 
-    line-height:2;
+line-height:2;
 
 }
 
+/* Button */
+
 button{
 
-    margin-top:40px;
+margin-top:35px;
 
-    padding:15px 40px;
+padding:15px 38px;
 
-    border:none;
+border:none;
 
-    border-radius:40px;
+border-radius:40px;
 
-    background:#b8860b;
+background:linear-gradient(45deg,#b8860b,#e6c35c);
 
-    color:white;
+color:white;
 
-    font-size:18px;
+font-size:18px;
 
-    cursor:pointer;
+cursor:pointer;
 
-    transition:.3s;
+transition:.35s;
+
+box-shadow:0 0 18px rgba(255,215,0,.45);
 
 }
 
 button:hover{
 
-    transform:scale(1.08);
+transform:scale(1.08);
 
-    background:#9d7200;
+box-shadow:
+0 0 25px gold,
+0 0 50px rgba(255,215,0,.6);
+
+}
+
+/* Floating Rose */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
 
 }
 
 /* Animations */
 
-@keyframes float{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-12px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-
-}
-
 @keyframes sparkles{
 
-    from{
+0%{
 
-        transform:translateY(-120px);
-
-    }
-
-    to{
-
-        transform:translateY(120vh);
-
-    }
+transform:translateY(-120px);
 
 }
 
-@keyframes hearts{
+100%{
 
-    from{
-
-        transform:translateY(-120px) rotate(0deg);
-
-    }
-
-    to{
-
-        transform:translateY(120vh) rotate(360deg);
-
-    }
+transform:translateY(120vh);
 
 }
 
-@keyframes flowers{
+}
 
-    from{
+@keyframes roses{
 
-        transform:translateY(-120px) rotate(0deg);
+0%{
 
-    }
+transform:translateY(-150px) rotate(0deg);
 
-    to{
+}
 
-        transform:translateY(120vh) rotate(-360deg);
+100%{
 
-    }
+transform:translateY(120vh) rotate(360deg);
+
+}
 
 }
 
 @keyframes fadeUp{
 
-    from{
+from{
 
-        opacity:0;
+opacity:0;
 
-        transform:translateY(40px);
+transform:translateY(40px);
 
-    }
+}
 
-    to{
+to{
 
-        opacity:1;
+opacity:1;
 
-        transform:translateY(0);
+transform:translateY(0);
 
-    }
+}
 
 }
 
@@ -346,40 +321,46 @@ button:hover{
 
 @media(max-width:768px){
 
-    .card{
+.card{
 
-        padding:30px 20px;
+padding:28px 22px;
 
-    }
+}
 
-    h1{
+h1{
 
-        font-size:30px;
+font-size:34px;
 
-    }
+}
 
-    h2{
+h2{
 
-        font-size:22px;
+font-size:22px;
 
-    }
+}
 
-    .quote{
+.message{
 
-        font-size:20px;
+font-size:16px;
 
-    }
+}
 
-    .message{
+.quote{
 
-        font-size:16px;
+font-size:20px;
 
-    }
+}
 
-    .signature{
+.signature{
 
-        font-size:18px;
+font-size:18px;
 
-    }
+}
+
+button{
+
+width:100%;
+
+}
 
 }
