@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Enchanted Library</title>
+
+<link rel="stylesheet" href="games.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="sparkles"></div>
+<div class="floatingBooks"></div>
+
+<div class="container">
+
+<div class="card">
+
+<h1>📖 The Enchanted Library</h1>
+
+<h2 id="welcome"></h2>
+
+<p class="intro">
+
+Welcome to the magical library.
+
+Before you discover what's hidden inside this story...
+
+You'll need to restore a little bit of magic.
+
+Complete the three tiny challenges below.
+
+</p>
+
+<!-- Progress -->
+
+<div class="progress">
+
+<div class="step done" id="step1">🌹</div>
+
+<div class="line"></div>
+
+<div class="step" id="step2">🕯️</div>
+
+<div class="line"></div>
+
+<div class="step" id="step3">📚</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- GAME 1 -->
+<!-- ========================= -->
+
+<section id="game1">
+
+<h3>🌹 Find the Enchanted Rose</h3>
+
+<p>
+
+Only one flower possesses the library's magic.
+
+Can you find it?
+
+</p>
+
+<div class="flowers">
+
+<div class="flower" onclick="wrongFlower()">🌼</div>
+
+<div class="flower" onclick="wrongFlower()">🌸</div>
+
+<div class="flower" onclick="correctFlower()">🌹</div>
+
+<div class="flower" onclick="wrongFlower()">🌺</div>
+
+<div class="flower" onclick="wrongFlower()">🌻</div>
+
+<div class="flower" onclick="wrongFlower()">🌷</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GAME 2 -->
+<!-- ========================= -->
+
+<section id="game2" style="display:none;">
+
+<h3>🕯️ Light the Candles</h3>
+
+<p>
+
+Tap all three candles to brighten the library.
+
+</p>
+
+<div class="candles">
+
+<div class="candle" onclick="lightCandle(this)">🕯️</div>
+
+<div class="candle" onclick="lightCandle(this)">🕯️</div>
+
+<div class="candle" onclick="lightCandle(this)">🕯️</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GAME 3 -->
+<!-- ========================= -->
+
+<section id="game3" style="display:none;">
+
+<h3>📚 Arrange the Magic Books</h3>
+
+<p>
+
+Tap the books in order:
+
+1️⃣ Blue
+
+2️⃣ Green
+
+3️⃣ Red
+
+</p>
+
+<div class="books">
+
+<div class="book blue" onclick="tapBook('blue')">📘</div>
+
+<div class="book red" onclick="tapBook('red')">📕</div>
+
+<div class="book green" onclick="tapBook('green')">📗</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<div id="message"></div>
+
+<button
+id="continueBtn"
+style="display:none;"
+onclick="continueLetter()">
+
+Open My Letter ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<script src="games.js"></script>
+
+</body>
+
+</html>
